@@ -1,0 +1,5 @@
+{{#ember-collection items=options cell-layout=(fixed-grid-layout 1200 32) as |opt|}}
+  <li class="ember-power-select-option {{ember-power-select-option-classes opt selection highlighted}}" onclick={{action select opt dropdown}} onmouseover={{action highlight opt}}>
+    {{yield opt}}
+  </li>
+{{/ember-collection}}

@@ -1,3 +1,12 @@
 <h2 id="title">Welcome to Ember</h2>
 
-{{outlet}}
+<p>Normal</p>
+
+{{#power-select options=numbers selected=selected onchange=(action (mut selected)) as |number|}}
+  {{number}}
+{{/power-select}}
+
+<p>power-select-collection</p>
+{{#power-select-collection options=numbers selected=selected onchange=(action (mut selected)) as |number|}}
+  {{number}}
+{{/power-select-collection}}
